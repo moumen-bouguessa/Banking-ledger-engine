@@ -1,9 +1,9 @@
 # Banking Ledger Engine
 
 ![Build Status](https://github.com/moumen-bouguessa/Banking-ledger-engine/workflows/CI%20Build,%20Test,%20Security,%20and%20Push%20Docker%20Image/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=moumen-bouguessa_Banking-ledger-engine&metric=alert_status)](https://sonarcloud.io/summary/overall?id=moumen-bouguessa_Banking-ledger-engine)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=moumen-bouguessa_Banking-ledger-engine&metric=sqale_rating)](https://sonarcloud.io/summary/overall?id=moumen-bouguessa_Banking-ledger-engine)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=moumen-bouguessa_Banking-ledger-engine&metric=security_rating)](https://sonarcloud.io/summary/overall?id=moumen-bouguessa_Banking-ledger-engine)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=moumen-bouguessa_Banking-ledger-engine&metric=alert_status&token=1a6b64f14a0a0f77f597c85ef11d05a195300226)](https://sonarcloud.io/summary/new_code?id=moumen-bouguessa_Banking-ledger-engine)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=moumen-bouguessa_Banking-ledger-engine&metric=sqale_rating&token=1a6b64f14a0a0f77f597c85ef11d05a195300226)](https://sonarcloud.io/summary/new_code?id=moumen-bouguessa_Banking-ledger-engine)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=moumen-bouguessa_Banking-ledger-engine&metric=security_rating&token=1a6b64f14a0a0f77f597c85ef11d05a195300226)](https://sonarcloud.io/summary/new_code?id=moumen-bouguessa_Banking-ledger-engine)
 
 A high-performance, secure core banking backend engine built with Java 17 and Spring Boot 3. Designed following rigorous software verification, extensive mutation testing, formal behavioral specification, and multi-layered DevSecOps principles.
 
