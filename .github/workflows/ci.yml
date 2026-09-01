@@ -32,6 +32,12 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
+    - name: Run Snyk to check for dependency vulnerabilities
+      uses: snyk/actions/maven@master
+      continue-on-error: true
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
     - name: Run Tests, JaCoCo, and PiTest
       run: mvn clean test jacoco:report pitest:mutationCoverage
 
