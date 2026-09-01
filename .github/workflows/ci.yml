@@ -1,4 +1,4 @@
-name: CI Build and Test
+name: CI Build, Test, and Push Docker Image
 
 on:
   push:
@@ -21,5 +21,18 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
-    - name: Run Tests, JaCoCo, PiTest, and JMH Performance Benchmarks
-      run: mvn clean test jacoco:report pitest:mutationCoverage test -Dtest=LedgerBenchmark
+    - name: Run Tests, JaCoCo, and PiTest
+      run: mvn clean test jacoco:report pitest:mutationCoverage
+
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Build and Push Docker Image
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        push: true
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/banking-ledger-engine:latest
