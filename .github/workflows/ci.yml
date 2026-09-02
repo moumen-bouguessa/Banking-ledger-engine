@@ -32,9 +32,12 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
+    - name: Install Snyk CLI
+      uses: snyk/actions/setup@master
+
     - name: Run Snyk to check for dependency vulnerabilities
-      uses: snyk/actions/maven@master
       continue-on-error: true
+      run: snyk test
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
